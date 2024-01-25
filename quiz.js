@@ -77,7 +77,12 @@ function endQuiz() {
 }
 
 function nextQuestion() {
-    showQuestion();
+    if (currentQuestionIndex < questions.length - 1) {
+        currentQuestionIndex++;
+        showQuestion();
+    } else {
+        endQuiz();
+    }
 }
 
 // Start the quiz
