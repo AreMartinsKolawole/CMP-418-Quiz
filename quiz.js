@@ -24,7 +24,7 @@ const questions = [
    { question: 'Some types of computer architecture include', options: ['No-architecture', 'Architecture', 'Reduced Instruction Set Computer'], correctAnswer: 'Reduced Instruction Set Computer' },
    { question: 'The register used as a working area in the CPU is the ', options: ['Register', 'Accumulator', ' Control Unit'], correctAnswer: 'Accumulator' },
    { question: 'What is the interrupt request line a part of?', options: ['Binary line', 'None of the Above', 'Control lines'], correctAnswer: 'Control lines'},
- { question: 'Where is the return address from the interrupt service routine stored?', options: ['Interrupt Service', 'Processor stack', 'Control lines'], correctAnswer: 'Control lines'},
+ { question: 'Where is the return address from the interrupt service routine stored?', options: ['Interrupt Service', 'Processor stack', 'Control lines'], correctAnswer: 'Processor stack'},
   { question: 'A structure and behavior that is observed by the user refers to the ', options: ['Computer Organization', 'Coordinates ', 'The ALU'], correctAnswer: 'Computer Organization' },
    { question: 'CSA stands for ', options: ['Computer Speed Addition', 'Coordinates Speed Addictive ', 'Computer Serial Addition'], correctAnswer: 'Computer Speed Addition' },
   { question: 'A ______ is used to reduce memory access time by storing frequently accessed data closer to the processor', options: ['Computer Speed', 'Cache', 'Flags Register'], correctAnswer: 'Cache' },
