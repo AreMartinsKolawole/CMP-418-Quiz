@@ -13,7 +13,7 @@ const questions = [
     { question: 'An _________  is part of the control lines on the bus. It signals the processor that an event requires immediate attention', options: ['Accumulator (ACC)', 'Interrupt Request', 'Status Register'], correctAnswer: 'Interrupt Request' },
     { question: 'Interrupt request keeps track of the return addresses from the interrupt service routine stored', options: ['False', 'True', 'Partially'], correctAnswer: 'True' },
     { question: 'If a processor doesnt have a stack pointer register - all the sequence of subroutine calls are', options: ['Not Possible', 'Possible', 'Delayed'], correctAnswer: 'Possible' },
-   { question: 'The register that contains the data to be written into or read out of the address location is the Memory?', options: ['Register of Deeds', 'Address Register (MAR)', 'Data Register (MDR)'], correctAnswer: 'Data Register (MDR)' },
+   { question: 'The register that contains the data to be written into or read out of the address location is the Memory?', options: ['None of the Above', 'Address Register (MAR)', 'Data Register (MDR)'], correctAnswer: 'Data Register (MDR)' },
   { question: 'Storage locations in the ALU and CU are called ', options: ['Register', 'Shareholder', ' Memory'], correctAnswer: 'Register' },
   { question: 'What is the term for the number of successful memory accesses stated as a fraction?', options: ['Dirty bit', 'Hit rate', 'Binary rate'], correctAnswer: 'Hit rate'},
   { question: ' The register that holds the information before the decoder is the', options: ['Raw Facts', 'Data Register', 'Control Unit'], correctAnswer: 'Data Register' },
@@ -68,15 +68,26 @@ function showQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
     questionContainer.textContent = currentQuestion.question;
 
+    const shuffledOptions = shuffleOptions(currentQuestion.options);
+
     optionsContainer.innerHTML = '';
-    for (let i = 0; i < currentQuestion.options.length; i++) {
+    for (let i = 0; i < shuffledOptions.length; i++) {
         const option = document.createElement('div');
         option.className = 'option';
-        option.textContent = currentQuestion.options[i];
-        option.onclick = () => checkAnswer(currentQuestion.options[i]);
+        option.textContent = shuffledOptions[i];
+        option.onclick = () => checkAnswer(shuffledOptions[i]);
         optionsContainer.appendChild(option);
     }
 }
+
+function shuffleOptions(options) {
+    for (let i = options.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [options[i], options[j]] = [options[j], options[i]];
+    }
+    return options;
+}
+
 
 function checkAnswer(selectedOption) {
     const currentQuestion = questions[currentQuestionIndex];
