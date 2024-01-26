@@ -51,7 +51,17 @@ function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
     nextButton.style.display = 'block';
+
+    shuffleQuestions();
+
     showQuestion();
+}
+
+function shuffleQuestions() {
+    for (let i = questions.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [questions[i], questions[j]] = [questions[j], questions[i]];
+    }
 }
 
 function showQuestion() {
