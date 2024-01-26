@@ -42,8 +42,7 @@ const questions = [
 { question: 'What is the bit called that signifies the completion of the cache?', options: ['Dirty bit', 'Neat bit', 'Binary bit'], correctAnswer: 'Dirty bit'},
 { question: 'What term represents instructions to perform on operands in machine language?', options: ['OP codes/operation codes', 'Sequence Code', 'All of the Above'], correctAnswer: 'OP codes/operation codes'},
 { question: 'What would not appear in the object program?', options: ['High Level directives', 'Assembler directives', 'All of the Above'], correctAnswer: 'Assembler directives'},
-
-    
+    { question: 'Processor stack keeps track of the return addresses from the interrupt service routine stored', options: ['Not Sure', 'True', 'False'], correctAnswer: 'True'},
 ];
 
 
