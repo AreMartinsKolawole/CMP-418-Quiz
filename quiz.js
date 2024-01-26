@@ -21,7 +21,7 @@ const questions = [
   { question: 'A general-purpose set of registers that can be used for various purposes is', options: ['Diatype', 'Scratchpad', 'Storage Address'], correctAnswer: 'Scratchpad' },
    { question: 'The register used in the CU to indicate the next instruction to be executed is the', options: ['Program Counter', 'Scratchpad', 'Instruction Register'], correctAnswer: 'Program Counter' },
   { question: 'Computer architecture is a set of principles and methods that define the functioning, organization, and implementation of a computer system', options: ['True', 'False', 'Not Sure'], correctAnswer: 'True' },
-   { question: 'Some types of computer architecture include', options: ['No-architecture', 'Architecture', 'Reduced Instruction Set Computer'], correctAnswer: 'Reduced Instruction Set Computer' },
+   { question: 'Some types of computer architecture include', options: ['Von Neumann architecture', 'All of the Above', 'Reduced Instruction Set Computer (RISC)'], correctAnswer: 'All of the Above' },
    { question: 'The register used as a working area in the CPU is the ', options: ['Register', 'Accumulator', ' Control Unit'], correctAnswer: 'Accumulator' },
    { question: 'What is the interrupt request line a part of?', options: ['Binary line', 'None of the Above', 'Control lines'], correctAnswer: 'Control lines'},
  { question: 'Where is the return address from the interrupt service routine stored?', options: ['Interrupt Service', 'Processor stack', 'Control lines'], correctAnswer: 'Processor stack'},
